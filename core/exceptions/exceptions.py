@@ -6,3 +6,9 @@ credentials_exception = HTTPException(
     detail="Could not validate credentials",
     headers={"WWW-Authenticate": "Bearer"},
 )
+
+
+NO_SUCH_GAME_EXCEPTION = HTTPException(
+    status_code=403,
+    detail="No game with such token"
+)
